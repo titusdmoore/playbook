@@ -1,0 +1,17 @@
+- name: Setup SSH directory
+  ansible.builtin.copy:
+    src: ../../auth/.ssh
+    dest: /home/tmoore
+    owner: tmoore
+    mode: '0700'
+
+- name: Install Stow 
+  community.general.pacman:
+    name: stow
+    state: present
+
+- name: Clone dotfiles from git
+  ansible.builtin.git:
+    repo: git@github.com:titusdmoore/.dotfiles.git
+    dest: /home/tmoore
+    clone: yes

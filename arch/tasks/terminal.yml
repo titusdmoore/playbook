@@ -1,0 +1,8 @@
+- name: Install Kitty
+  community.general.pacman:
+    name: kitty
+    state: present
+- name: Install Starship 
+  community.general.pacman:
+    name: starship 
+    state: present

@@ -1,0 +1,7 @@
+- name: Setup Arch System
+  become: true
+  hosts: localhost
+
+  tasks:
+    - include_tasks: tasks/init.yml
+    - include_tasks: tasks/terminal.yml
