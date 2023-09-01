@@ -1,4 +1,5 @@
 - name: Setup SSH directory
+  become: yes
   ansible.builtin.copy:
     src: ../../auth/.ssh
     dest: /home/tmoore
@@ -13,4 +14,5 @@
 - name: Clone dotfiles from git
   ansible.builtin.git:
     repo: git@github.com:titusdmoore/.dotfiles.git
-    dest: /home/tmoore
+    dest: /home/tmoore/.dotfiles
+    clone: yes
