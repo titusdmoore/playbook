@@ -14,4 +14,3 @@
   ansible.builtin.git:
     repo: git@github.com:titusdmoore/.dotfiles.git
     dest: /home/tmoore
-    clone: yes
